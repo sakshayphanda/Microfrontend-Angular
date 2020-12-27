@@ -152,7 +152,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-build-plus:browser",
           "options": {
             "outputPath": "dist/sideNavApp",
             "index": "projects/side-nav-app/src/index.html",
@@ -217,7 +217,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "options": {
             "browserTarget": "sideNavApp:build"
           },
@@ -234,7 +234,7 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "ngx-build-plus:karma",
           "options": {
             "main": "projects/side-nav-app/src/test.ts",
             "polyfills": "projects/side-nav-app/src/polyfills.ts",
@@ -415,5 +415,5 @@
       }
     }
   },
-  "defaultProject": "dynamicContentApp"
+  "defaultProject": "headerApp"
 }
