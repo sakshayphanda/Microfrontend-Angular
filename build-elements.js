@@ -23,11 +23,12 @@ const concat = require('concat');
   await concat(files, './completeApp/'  + programName + '/elements/' +programName + '-elements.js');
   console.log('completed !!!!');
   fsExtra.copy('./dist/'  + programName + '/assets', './completeApp/'  + programName + '/assets', function (err) {
+    console.log('Copying Assets!!')
     if (err){
         console.log('An error occured while copying the folder.')
         return console.error(err)
     }
-    console.log('Copy completed!')
+    console.log('Copy Assets completed!')
 });
   }
 })()
