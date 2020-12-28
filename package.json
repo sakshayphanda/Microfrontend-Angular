@@ -12,7 +12,8 @@
     "postinstall": "ngcc",
     "build:headerApp:externals": "ng build --extra-webpack-config projects/header-app//webpack.externals.js --prod --project headerApp --single-bundle --output-hashing none && node build-elements.js headerApp",
     "build:sideNavApp:externals": "ng build --extra-webpack-config projects/side-nav-app//webpack.externals.js --prod --project sideNavApp --single-bundle --output-hashing none && node build-elements.js sideNavApp",
-    "build:dynamicContentApp:externals": "ng build --extra-webpack-config projects/dynamic-content-app//webpack.externals.js --prod --project dynamicContentApp --single-bundle --output-hashing none && node build-elements.js dynamicContentApp"
+    "build:dynamicContentApp:externals": "ng build --extra-webpack-config projects/dynamic-content-app//webpack.externals.js --prod --project dynamicContentApp --single-bundle --output-hashing none && node build-elements.js dynamicContentApp",
+    "build:platform:externals": "ng build --extra-webpack-config projects/platform//webpack.externals.js --prod --project platform --single-bundle"
   },
   "private": true,
   "dependencies": {
