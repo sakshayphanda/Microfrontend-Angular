@@ -16,8 +16,18 @@ const concat = require('concat');
     './dist/' + programName + '/main.js'
   ];
 
-  await fsExtra.ensureDir('./dist/' + programName + '/elements');
-  await concat(files, './dist/'  + programName + '/elements' + '/elements.js');
+  await fsExtra.ensureDir('./completeApp/' + programName + '/elements');
+  await fsExtra.ensureDir('./completeApp/' + programName + '/assets');
+  await fsExtra.ensureDir('./dist/' + programName + '/assets');
+
+  await concat(files, './completeApp/'  + programName + '/elements/' +programName + '-elements.js');
   console.log('completed !!!!');
+  fsExtra.copy('./dist/'  + programName + '/assets', './completeApp/'  + programName + '/assets', function (err) {
+    if (err){
+        console.log('An error occured while copying the folder.')
+        return console.error(err)
+    }
+    console.log('Copy completed!')
+});
   }
 })()
